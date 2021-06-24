@@ -112,6 +112,13 @@ async def on_ready():
 @bot.event
 async def on_message(message):
   URL = "https://docs.google.com/spreadsheets/d/1pFMRZ6OuUDmT2xQgR6ug6ExrHkKxEL8Q93LkI8T3rDg/htmlembed"
+  if "calender" in message.content or "date" in message.content:
+        todays_date = date.today()
+        c = calendar.TextCalendar.SUNDAY)
+        str = c.formatmonth(int(todays_date.year), int(todays_date.month))
+        embed = discord.Embed(title="Calender:",description=str, color=discord.Color.blue())
+        embed.set_thumbnail(url="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/calendar-512.png")
+        await message.channel.send(embed=embed)
   if "schedule" in message.content:
     os.system("wget " + URL)
     os.rename(r'htmlembed',r'htmlembed.html')
