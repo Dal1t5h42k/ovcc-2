@@ -98,7 +98,7 @@ def send_email(sender, recipient,subject, body):
         server.close()
         print("successfully sent the mail to "+recipient)
     except: print("failed to send mail to "+recipient)
-politics = ["congress", "cabinet", "Trump", "trump", "Biden", "biden", "president", "Pres", "President", "VP", "Vice President", "vp", "Republican", "Democrate", "Joe"]
+politics = ["congress", "cabinet", "Trump", "trump", "Biden", "biden", , "Republican", "Democrat", "Joe"]
 bot_id = "ODU0ODkwMTEyNjYzMTU4ODM5.YMqgdQ.vh4IjkmxfA2DxQgY_RCAmlY9JuU"
 #intents = discord.Intents.default()
 #intents.members=True
