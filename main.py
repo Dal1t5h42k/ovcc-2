@@ -2,7 +2,7 @@
 import csv
 from datetime import date
 import calendar
-import gspread
+#import gspread
 #import dog
 import os
 import re
@@ -19,29 +19,29 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import requests
 import discord
-from email.message import EmailMessage
-import ssl
-import smtplib
+#from email.message import EmailMessage
+#import ssl
+#import smtplib
 from bs4 import BeautifulSoup
 from datetime import datetime
 import requests
-import ssl
+#import ssl
 import os
 #import bot
-import pygsheets
+#import pygsheets
 import json
 import csv
 import asyncio
-from google.oauth2 import service_account
+#from google.oauth2 import service_account
 import smtp
 import urllib 
 import random
-import smtplib
+#import smtplib
 import asyncio
-from discord.utils import get
+#from discord.utils import get
 import asyncio
-from pythonping import ping
-import smtplib
+#from pythonping import ping
+#import smtplib
 from socket import gaierror
 from tabulate import tabulate
 import requests
@@ -51,14 +51,15 @@ import pandas as pd
 import os
 from tabulate import tabulate
 nitros = []
-intents = discord.Intents.all()
-client = discord.Client(intents = intents)
+intents = discord.Intents.default()
+intents.members = True
+client = discord.Client(intents=intents)
 lister = ""
 api_key = "114196e25be211b63915f78266020556"
 count = 0
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
 usacolinks = ["http://www.usaco.org/index.php?page=viewproblem2&cpid=942", "http://www.usaco.org/index.php?page=viewproblem2&cpid=943", "http://www.usaco.org/index.php?page=viewproblem2&cpid=944", "http://www.usaco.org/index.php?page=viewproblem2&cpid=939", "http://www.usaco.org/index.php?page=viewproblem2&cpid=940", "http://www.usaco.org/index.php?page=viewproblem2&cpid=941", "http://www.usaco.org/index.php?page=viewproblem2&cpid=918", "http://www.usaco.org/index.php?page=viewproblem2&cpid=919", "http://www.usaco.org/index.php?page=viewproblem2&cpid=920", "http://www.usaco.org/index.php?page=viewproblem2&cpid=915", "http://www.usaco.org/index.php?page=viewproblem2&cpid=916", "http://www.usaco.org/index.php?page=viewproblem2&cpid=917", "http://www.usaco.org/index.php?page=viewproblem2&cpid=894", "http://www.usaco.org/index.php?page=viewproblem2&cpid=895", "http://www.usaco.org/index.php?page=viewproblem2&cpid=896", "http://www.usaco.org/index.php?page=viewproblem2&cpid=891", "http://www.usaco.org/index.php?page=viewproblem2&cpid=892", "http://www.usaco.org/index.php?page=viewproblem2&cpid=893", "http://www.usaco.org/index.php?page=viewproblem2&cpid=858", "http://www.usaco.org/index.php?page=viewproblem2&cpid=859", "http://www.usaco.org/index.php?page=viewproblem2&cpid=860", "http://www.usaco.org/index.php?page=viewproblem2&cpid=855", "http://www.usaco.org/index.php?page=viewproblem2&cpid=856", "http://www.usaco.org/index.php?page=viewproblem2&cpid=857", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1038", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1039", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1040", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1035", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1036", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1037", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1014", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1015", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1016", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1011", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1012", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1013", "http://www.usaco.org/index.php?page=viewproblem2&cpid=990", "http://www.usaco.org/index.php?page=viewproblem2&cpid=991", "http://www.usaco.org/index.php?page=viewproblem2&cpid=992", "http://www.usaco.org/index.php?page=viewproblem2&cpid=987", "http://www.usaco.org/index.php?page=viewproblem2&cpid=988", "http://www.usaco.org/index.php?page=viewproblem2&cpid=989", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1134", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1135", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1136", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1131", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1132", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1133", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1110", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1111", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1112", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1107", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1108", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1109", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1086", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1087", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1088", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1083","http://www.usaco.org/index.php?page=viewproblem2&cpid=1084", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1085", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1062", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1063", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1064", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1059", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1060", "http://www.usaco.org/index.php?page=viewproblem2&cpid=1061", ""]
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='!', intents = intents)
 def write_emails(mails, *args):
     for arg in args:
         mails.remove(arg)
@@ -98,19 +99,22 @@ def send_email(sender, recipient,subject, body):
         server.close()
         print("successfully sent the mail to "+recipient)
     except: print("failed to send mail to "+recipient)
-politics = ["congress", "cabinet", "Trump", "trump", "Biden", "biden", , "Republican", "Democrat", "Joe"]
+politics = ["congress", "cabinet", "Trump", "trump", "Biden", "biden", "president", "Pres", "President", "VP", "Vice President", "vp", "Republican", "Democrate", "Joe"]
 bot_id = "ODU0ODkwMTEyNjYzMTU4ODM5.YMqgdQ.vh4IjkmxfA2DxQgY_RCAmlY9JuU"
 #intents = discord.Intents.default()
 #intents.members=True
 #bot = discord.bot(intents=intents)
 badlist = ["fuck", "shit", "wap", "WAP", "bish", "bitch", "ass", "suck", "ur mom", "shut", "shut up"]
 #bot = discord.bot()
-@bot.event
-async def on_ready():
-  print("OVCC READY!")
+#@bot.event
+#async def on_ready():
+  #print("OVCC READY!")
 #ment = member.mention
 #await self.bot.get_channel(779860877465092146).send(f"{ment} has joined the server.")
 #print(f"{member} has joined the server.")
+@bot.event
+async def on_member_join(member):
+  await member.send(str(member.mention) + ", Welcome to the OVCC Discord Server!\n Please read #rules as they are very important. \n Look at #new-people to find out what to do next.\n React with a role in #groups-and-roles. It is very important that you do this so you will get access to the discord channels.\n Look at #channels for a description on each channel.\n Thank you for joining the OVCC discord server and have fun!\n \n\n Regards,\n The Officers")
 @bot.event
 async def on_message(message):
   URL = "https://docs.google.com/spreadsheets/d/1pFMRZ6OuUDmT2xQgR6ug6ExrHkKxEL8Q93LkI8T3rDg/htmlembed"
@@ -173,11 +177,13 @@ async def on_message(message):
     fc = json.loads(facts.text)
     fin = ""
     fin = data["url"]
-    kt = fc["fact"]
-    embed = discord.Embed(title="Doggo!", color=discord.Color.blue())
+    #file = discord.File(url = fin)
+    embed = discord.Embed()
+    embed.title = "Doggo!"
     embed.set_image(url=fin)
-    si = "Fact: " + str(kt)
-    embed.set_footer(text=si)
+    #embed = discord.Embed(title="Doggo!", color=discord.Color.blue())
+    #embed.set_image(url=fin)
+    #embed.set_footer(text=si)
     await message.channel.send(embed=embed)
   if "weather" in message.content:
     city_name = "San Diego"
