@@ -54,7 +54,6 @@ nitros = []
 intents = discord.Intents.all()
 client = discord.Client(intents = intents)
 lister = ""
-TOKEN = "ODU0ODkwMTEyNjYzMTU4ODM5.YMqgdQ.0suH2ZBoztt7J6os9FspDi9SFJk"
 api_key = "114196e25be211b63915f78266020556"
 count = 0
 base_url = "http://api.openweathermap.org/data/2.5/weather?"
@@ -217,4 +216,4 @@ async def on_message(message):
 #@bot.command()
 #async def email(subject, *, sender, reciever, body):
   #send_email(sender, reciever, subject, body)
-bot.run(TOKEN)
+bot.run('ODU0ODkwMTEyNjYzMTU4ODM5.YMqgdQ.3kQk9Qhi2ZJM2ZOE000Jl8RvOaQ')
