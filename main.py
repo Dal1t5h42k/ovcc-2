@@ -113,6 +113,9 @@ badlist = ["fuck", "shit", "wap", "WAP", "bish", "bitch", "ass", "suck", "ur mom
 #await self.bot.get_channel(779860877465092146).send(f"{ment} has joined the server.")
 #print(f"{member} has joined the server.")
 @bot.event
+async def on_ready():
+    print("OVCC Online!")
+@bot.event
 async def on_member_join(member):
   await member.send(str(member.mention) + ", Welcome to the OVCC Discord Server!\n Please read #rules as they are very important. \n Look at #new-people to find out what to do next.\n React with a role in #groups-and-roles. It is very important that you do this so you will get access to the discord channels.\n Look at #channels for a description on each channel.\n Thank you for joining the OVCC discord server and have fun!\n \n\n Regards,\n The Officers")
 @bot.event
