@@ -100,7 +100,6 @@ def send_email(sender, recipient,subject, body):
         print("successfully sent the mail to "+recipient)
     except: print("failed to send mail to "+recipient)
 politics = ["congress", "cabinet", "Trump", "trump", "Biden", "biden", "president", "Pres", "President", "VP", "Vice President", "vp", "Republican", "Democrate", "Joe"]
-bot_id = "ODU0ODkwMTEyNjYzMTU4ODM5.YMqgdQ.vh4IjkmxfA2DxQgY_RCAmlY9JuU"
 #intents = discord.Intents.default()
 #intents.members=True
 #bot = discord.bot(intents=intents)
@@ -225,4 +224,4 @@ async def on_message(message):
 #@bot.command()
 #async def email(subject, *, sender, reciever, body):
   #send_email(sender, reciever, subject, body)
-bot.run("ODU0ODkwMTEyNjYzMTU4ODM5.YMqgdQ.Ffdg9Gat0N5n6E2N4xiD9PF8amQ")
+#bot.run()
